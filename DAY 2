@@ -1,0 +1,185 @@
+Task 1:
+var name = "Ahmed";
+var age = 21;
+var isStudent = true;
+var data = null;
+var city;
+console.log(name);
+console.log(age);
+console.log(isStudent);
+console.log(data);
+console.log(city);
+console.log(typeof name);
+console.log(typeof age);
+console.log(typeof isStudent);
+console.log(typeof data);
+console.log(typeof city);
+var firstName = "Ahmed";
+var lastName = "Amir";
+console.log(firstName + " " + lastName);
+console.log(`${firstName} ${lastName}`);
+
+Task 2:
+var username = prompt("Enter your username");
+var password = prompt("Enter your password");
+if (username == "") {
+    alert("Username is required");
+}
+else if (password.length < 8) {
+    alert("Password must be at least 8 characters");
+}
+else {
+    console.log("Username: " + username);
+    console.log("Password: " + password);
+}
+----------------------------------------------------------------------------------------------------------------------------------
+var name = prompt("Enter your name");
+var age = Number(prompt("Enter your age"));
+var experience = Number(prompt("Enter your years of experience"));
+var rating = Number(prompt("Enter your self rating (1-10)"));
+var baseSalary = Number(prompt("Enter your base salary"));
+var category;
+if (experience < 2) {
+    category = "Junior";
+}
+else if (experience <= 5) {
+    category = "Mid-Level";
+}
+else if (experience <= 10) {
+    category = "Senior";
+}
+else {
+    category = "Expert";
+}
+var performance;
+
+switch (rating) {
+    case 10:
+    case 9:
+        performance = "Excellent";
+        break;
+
+    case 8:
+    case 7:
+        performance = "Good";
+        break;
+
+    case 6:
+    case 5:
+        performance = "Average";
+        break;
+
+    default:
+        performance = "Needs Improvement";
+}
+var bonus = 0;
+
+if (experience <= 2) {
+    bonus = baseSalary * 0.10;
+}
+else if (experience <= 5) {
+    bonus = baseSalary * 0.15;
+}
+else {
+    bonus = baseSalary * 0.20;
+}
+var finalSalary = baseSalary + bonus;
+var hour = new Date().getHours();
+var shift;
+if (hour >= 9 && hour < 18) {
+    shift = "Day Shift";
+}
+else {
+    shift = "Night Shift";
+}
+var report =
+`Employee Name: ${name}
+Age: ${age}
+Experience: ${experience}
+Category: ${category}
+Performance: ${performance}
+Base Salary: ${baseSalary}
+Bonus: ${bonus}
+Final Salary: ${finalSalary}
+Shift: ${shift}`;
+console.log(report);
+alert(report);
+document.getElementById("result").innerText = report;
+-----------------------------------------------------------------------------------------
+  Task 1:
+for (var i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+Task 2:
+for (var i = 2; i <= 20; i += 2) {
+    console.log(i);
+}
+
+Task 3:
+var total = 0;
+for (var i = 1; i <= 15; i++) {
+    total = total + i;
+}
+console.log("Total sales = " + total);
+
+Task 4:
+var i = 1;
+while (i <= 7) {
+    console.log(i);
+    i++;
+}
+
+Task 5:
+var i = 8;
+while (i >= 1) {
+    console.log(i);
+    i--;
+}
+
+Task 6:
+var i = 1;
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+
+Task 7:
+var itemsInCart = 10;
+
+// while
+while (itemsInCart < 5) {
+    console.log("Start Shopping");
+}
+
+// do while
+do {
+    console.log("Start Shopping");
+} while (itemsInCart < 5);
+
+// while won't run because condition is false.
+// do...while runs one time before checking.
+
+Task 8:
+var userName = "Ali";
+var userAge = 22;
+var isStudent = true;
+console.log(userName);
+console.log(typeof userName);
+console.log(userAge);
+console.log(typeof userAge);
+console.log(isStudent);
+console.log(typeof isStudent);
+
+Task 9:
+var dbPrice = 10;
+var inputPrice = "10";
+console.log(dbPrice == inputPrice);
+console.log(dbPrice === inputPrice);
+// == compares value
+// === compares value and type
+
+Task 10:
+var userName = prompt("Enter your name");
+alert(`Welcome, ${userName}`);
+console.log(`Welcome, ${userName}`);
