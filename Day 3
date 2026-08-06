@@ -1,0 +1,160 @@
+Task 1:
+var fullName = prompt("Enter your full name");
+fullName = fullName.trim();
+var words = fullName.split(" ");
+var result = "";
+for (var i = 0; i < words.length; i++) {
+    if (words[i] != "") {
+        result += words[i][0].toUpperCase();
+
+        result += words[i].slice(1).toLowerCase();
+
+        result += " ";
+    }
+}
+result = result.trim();
+console.log(result);
+var count = result.replaceAll(" ", "").length;
+console.log("Characters = " + count);
+-----------------------------------------------------------------------------------------
+Task 2:
+var email = prompt("Enter Email");
+if (
+    email.includes("@") &&
+    email.endsWith(".com") &&
+    !email.startsWith("@") &&
+    !email.includes(" ")
+) {
+    console.log("Valid Email");
+}
+else {
+    console.log("Invalid Email");
+}
+-----------------------------------------------------------------------------------------
+
+Task 3:
+var text = prompt("Enter text");
+var letter = prompt("Enter character");
+text = text.toLowerCase();
+letter = letter.toLowerCase();
+var count = 0;
+for (var i = 0; i < text.length; i++) {
+
+    if (text[i] == letter) {
+        count++;
+    }
+}
+console.log(count);
+-----------------------------------------------------------------------------------------
+
+Task 4:
+var sentence = prompt("Enter sentence");
+var word = prompt("Enter word");
+sentence = sentence.replaceAll(word, "***");
+console.log(sentence);
+-----------------------------------------------------------------------------------------
+
+Task 5:
+var firstName = prompt("First Name");
+var lastName = prompt("Last Name");
+var username = firstName.toLowerCase() + "." + lastName.toLowerCase();
+username = username.replaceAll(" ", "");
+if (username.length > 15) {
+    username = username.slice(0, 15);
+}
+console.log(username);
+-----------------------------------------------------------------------------------------
+
+Task 6:
+var text = prompt("Enter sentence");
+var word = prompt("Enter word");
+console.log(text.includes(word));
+console.log(text.indexOf(word));
+console.log(text.lastIndexOf(word));
+var count = 0;
+var arr = text.split(" ");
+for (var i = 0; i < arr.length; i++) {
+
+    if (arr[i] == word) {
+        count++;
+    }
+}
+console.log(count);
+-----------------------------------------------------------------------------------------
+
+
+Task 7:
+var text = prompt("Enter text");
+var words = text.split(" ");
+var result = "";
+for (var i = 0; i < words.length; i++) {
+    var reverse = "";
+    for (var j = words[i].length - 1; j >= 0; j--) {
+        reverse += words[i][j];
+    }
+    result += reverse + " ";
+}
+console.log(result);
+
+-----------------------------------------------------------------------------------------
+
+Task 8:
+var text = prompt("Enter text");
+var words = text.trim().split(" ");
+console.log("Words = " + words.length);
+console.log("Characters = " + text.replaceAll(" ", "").length);
+var vowels = 0;
+var digits = 0;
+var upper = 0;
+var lower = 0;
+for (var i = 0; i < text.length; i++) {
+    var ch = text[i];
+    if ("aeiouAEIOU".includes(ch))
+        vowels++;
+    if (ch >= "0" && ch <= "9")
+        digits++;
+    if (ch >= "A" && ch <= "Z")
+        upper++;
+    if (ch >= "a" && ch <= "z")
+        lower++;
+}
+console.log("Vowels = " + vowels);
+console.log("Digits = " + digits);
+console.log("Upper = " + upper);
+console.log("Lower = " + lower);
+var longest = words[0];
+var shortest = words[0];
+for (var i = 1; i < words.length; i++) {
+    if (words[i].length > longest.length)
+        longest = words[i];
+    if (words[i].length < shortest.length)
+        shortest = words[i];
+}
+console.log("Longest = " + longest);
+console.log("Shortest = " + shortest);
+
+-----------------------------------------------------------------------------------------
+
+Task 9:
+var phone = prompt("Enter phone number");
+var first = phone.slice(0, 4);
+var last = phone.slice(-3);
+var stars = "";
+for (var i = 0; i < phone.length - 7; i++) {
+    stars += "*";
+}
+console.log(first + stars + last);
+
+-----------------------------------------------------------------------------------------
+
+Task 10:
+var text = prompt("Enter sentence");
+text = text.trim();
+text = text.replaceAll("javascript", "JavaScript");
+text = text[0].toUpperCase() + text.slice(1);
+if (!text.endsWith(".")) {
+    text += ".";
+}
+console.log(text);
+
+
