@@ -1,0 +1,370 @@
+Task 1:
+function test() {
+    x = 10;
+}
+
+test();
+
+console.log(x);
+
+// x اشتغلت رغم إننا معملناش var أو let أو const
+// JavaScript عملتها global variable
+
+----------------------------------------------------------------------------
+Task 2:
+function test() {
+    "use strict";
+    try {
+        x = 10;
+    }
+    catch (error) {
+        console.log(error.message);
+    }
+}
+test();
+
+----------------------------------------------------------------------------
+Task 3:
+function test() {
+    "use strict";
+    var localVar = "test";
+    try {
+        delete localVar;
+    }
+    catch (error) {
+        console.log(error.message);
+    }
+    var student = {
+        name: "Ahmed"
+    };
+    delete student.name;
+    console.log(student);
+}
+test();
+
+----------------------------------------------------------------------------
+Task 4:
+console.log(x);
+var x = 10;
+console.log(x);
+
+----------------------------------------------------------------------------
+Task 5:
+sayHi();
+function sayHi() {
+    console.log("Hi");
+}
+Case 2:
+sayBye();
+
+var sayBye = function () {
+    console.log("Bye");
+};
+----------------------------------------------------------------------------
+Task 6:
+console.log(a);
+let a = 5;
+
+----------------------------------------------------------------------------
+Task 7:
+var n = 1;
+function demo() {
+    console.log(n);
+    var n = 2;
+    console.log(n);
+}
+demo();
+console.log(n);
+
+----------------------------------------------------------------------------
+Task 8:
+function test() {
+    if (true) {
+        var x = 10;
+    }
+    console.log(x);
+}
+test();
+
+----------------------------------------------------------------------------
+
+Task 9:
+function test() {
+    if (true) {
+        let x = 10;
+        const y = 20;
+        console.log(x);
+        console.log(y);
+    }
+    // console.log(x); // Error
+    // console.log(y); // Error
+}
+test();
+
+----------------------------------------------------------------------------
+
+Task 10:
+var name = "Ahmed";
+var name = "Ali";
+console.log(name);
+
+----------------------------------------------------------------------------
+
+Task 11:
+const student = {
+    name: "Ahmed",
+    age: 21,
+    city: "Cairo"
+};
+student.age = 22;
+console.log(student);
+student.grade = "A";
+console.log(student);
+delete student.city;
+console.log(student);
+
+try {
+    student = {
+        name: "Ali"
+    };
+}
+catch (error) {
+    console.log(error.message);
+}
+
+----------------------------------------------------------------------------
+
+Task 12:
+const nums = [1, 2, 3];
+nums.push(4);
+nums[0] = 10;
+console.log(nums);
+try {
+    nums = [5, 6, 7];
+}
+catch (error) {
+    console.log(error.message);
+}
+
+----------------------------------------------------------------------------
+
+Task 13:
+var a;
+let b;
+// const c; // Error
+
+----------------------------------------------------------------------------
+
+Task 14:
+var g1 = "var global";
+let g2 = "let global";
+const g3 = "const global";
+console.log(window.g1);
+console.log(window.g2);
+console.log(window.g3);
+
+----------------------------------------------------------------------------
+
+Task 15:
+const handlers = {};
+for (let i = 0; i < 3; i++) {
+    handlers["fn" + i] = function () {
+        return "index: " + i;
+    };
+}
+console.log(handlers.fn0());
+console.log(handlers.fn2());
+
+----------------------------------------------------------------------------
+
+Task 16:
+var welcome = (name) => `Welcome, ${name}!`;
+console.log(welcome("Ahmed"));
+
+----------------------------------------------------------------------------
+
+Task 17:
+var fullInfo = (first, last, age) =>
+    `${first} ${last} is ${age} years old`;
+console.log(fullInfo("Ahmed", "Amir", 21));
+
+----------------------------------------------------------------------------
+
+Task 18:
+var multiply = (a, b) => a * b;
+console.log(multiply(5, 3));
+var sum = (a, b) => {
+    console.log(a);
+    console.log(b);
+
+    return a + b;
+};
+console.log(sum(5, 3));
+
+----------------------------------------------------------------------------
+
+Task 19:
+const product = {
+    title: "Laptop",
+    price: 15000,
+    inStock: true,
+    brand: "Dell"
+};
+const { title, price, inStock } = product;
+console.log(title);
+console.log(price);
+console.log(inStock);
+
+----------------------------------------------------------------------------
+
+Task 20:
+const skills = ["HTML", "CSS", "JS", "React"];
+const [first, second] = skills;
+console.log(first);
+console.log(second);
+
+----------------------------------------------------------------------------
+
+Task 21:
+function greet(name = "Guest", message = "Hello") {
+    return `${message}, ${name}!`;
+}
+console.log(greet("Ahmed", "Welcome"));
+console.log(greet("Ahmed"));
+console.log(greet());
+
+----------------------------------------------------------------------------
+
+Task 22:
+function sumAll(...numbers) {
+    var total = 0;
+    for (var i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+    }
+    return total;
+}
+console.log(sumAll(1, 2, 3));
+console.log(sumAll(10, 20, 30, 40));
+
+----------------------------------------------------------------------------
+
+Task 23:
+var arr1 = [1, 2];
+var arr2 = [3, 4, 5];
+var result = [...arr1, ...arr2];
+console.log(result);
+
+array:
+var numbers = [10, 20, 30];
+var copy = [...numbers];
+copy.push(40);
+console.log(numbers);
+console.log(copy);
+
+----------------------------------------------------------------------------
+
+Task 24:
+const user = {
+    name: "Sara",
+    age: 22
+};
+const contact = {
+    email: "sara@nti.com",
+    age: 23
+};
+const result = {
+    ...user,
+    ...contact
+};
+console.log(result);
+
+----------------------------------------------------------------------------
+
+Task 25:
+const values = [2, 4, 6, 8];
+function total(a, b, c, d) {
+    return a + b + c + d;
+}
+console.log(total(...values));
+
+----------------------------------------------------------------------------
+
+Task 26:
+let person1 = {
+    name: "Ali",
+    child: {
+        age: 5
+    }
+};
+let person2 = person1;
+person2.name = "Omar";
+console.log(person1.name);
+
+----------------------------------------------------------------------------
+
+Task 27:
+const original = {
+    name: "Mona",
+    details: {
+        city: "Cairo"
+    }
+};
+const copy = {
+    ...original
+};
+copy.name = "Ahmed";
+copy.details.city = "Alex";
+console.log(original);
+console.log(copy);
+
+----------------------------------------------------------------------------
+Task 28:
+const original = {
+    name: "Mona",
+    details: {
+        city: "Cairo"
+    }
+};
+const copy = structuredClone(original);
+copy.details.city = "Alex";
+console.log(original);
+console.log(copy);
+----------------------------------------------------------------------------
+
+Task 29:
+var user = {
+    name: "Ahmed",
+    age: 26,
+    city: "Alex"
+};
+localStorage.setItem("userdata", JSON.stringify(user));
+var data = localStorage.getItem("userdata");
+var userData = JSON.parse(data);
+console.log(typeof userData);
+console.log(userData);
+console.log(userData.name);
+console.log(userData.age);
+console.log(userData.city);
+localStorage.removeItem("userdata");
+
+----------------------------------------------------------------------------
+Task 30:
+const APP_CONFIG = {
+    name: "My App",
+    version: "1.0",
+    api: {
+        baseUrl: "https://example.com",
+        timeout: 5000
+    },
+    features: []
+};
+APP_CONFIG.api.timeout = 10000;
+APP_CONFIG.features.push("Login");
+console.log(APP_CONFIG);
+try {
+    APP_CONFIG = {};
+}
+catch (error) {
+    console.log(error.message);
+}
+
